@@ -31,3 +31,19 @@ class Solution:
         last_spaces = ' ' * (maxWidth - len(last_row)) # add it plus spaces required to fill width
         res.append(last_row + last_spaces)  
         return res
+
+"""
+Regarding division by zero error
+
+Example 2:
+
+Input: words = ["What","must","be","acknowledgment","shall","be"], maxWidth = 16
+Output:
+[
+  "What   must   be",
+  "acknowledgment  ",  # <-- here, pad the "last" word if it is the only word
+  "shall be        "
+]
+Explanation: Note that the last line is "shall be    " instead of "shall     be", because the last line must be left-justified instead of fully-justified.
+Note that the second line is also left-justified because it contains only one word.
+"""
